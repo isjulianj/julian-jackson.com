@@ -1,0 +1,18 @@
+{{ define "document"}}
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>{{ template "title" }}</title>
+        <link rel="stylesheet" href="/assets/styles.css"/>
+    </head>
+    <body class="body">
+    {{template "header" }}
+    <main class="wrapper">
+        {{template "content" }}
+    </main>
+    <footer></footer>
+    </body>
+    </html>
+{{end}}
