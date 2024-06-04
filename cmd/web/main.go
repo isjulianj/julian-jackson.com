@@ -2,8 +2,7 @@ package main
 
 import (
 	"flag"
-	"github.com/isjulianj/gojulianJackson/config"
-	"github.com/isjulianj/gojulianJackson/routes"
+	"github.com/isjulianj/gojulianJackson/cmd/web/config"
 	"log/slog"
 	"os"
 )
@@ -27,7 +26,7 @@ func run(logger *slog.Logger) error {
 
 	app := config.NewApplication(cfg, logger)
 
-	muxHandler := routes.Handler(app)
+	muxHandler := Handler(app)
 
 	return app.ServeHTTP(muxHandler)
 
